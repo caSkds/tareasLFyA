@@ -3,13 +3,19 @@ import re
 
 #cada elemento de la variable ejercicios deberá ser la solución al ejercicio correspondiente
 #es decir ejercicios["e03"]  es la solución al ejercicio [e03]
-ejercicios = {}
+ejercicios = {
+    "e08": re.compile('[aeiou][a-z]|[aeiou][a-z]*[aeiou][a-z]')
+}
 #cada elemento de la variable pruebas_match deberá ser un arreglo con las cadenas con las que DEBE hacer match la solución
 #Por ejemplo pruebas_match["e03"] = ["cadena1","cadena2"...] significa que cadena1, cadena2, etc. deben hacer match con la ER del ejercicio e03
-pruebas_match = {}
+pruebas_match = {
+    "e08": ["ab", "ii", "aab","alugbhwrfuz", "uaf"]
+}
 #cada elemento de la variable pruebas_nmatch deberá ser un arreglo con las cadenas con las que NO DEBE hacer match la solución
 #Por ejemplo pruebas_nmatch["e03"] = ["cadena1","cadena2"...] significa que cadena1, cadena2, etc. no deben hacer match
-pruebas_nmatch = {}
+pruebas_nmatch = {
+    "e08": ["abc", "xyz", "aba", "ba", "a"]
+}
 
 #Ejemplo:
 #ejercicios["CODIGO_DE_EJERCICIO"] = re.compile('ER_DE_LA_SOLUCION')
