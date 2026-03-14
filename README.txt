@@ -1,3 +1,3 @@
-Integrante1
-Integrante2
-Integrante3
+Hidalgo Rodríguez César
+Carbajal Lopez Jose David
+Diaz Huerta Frida Monserrat
