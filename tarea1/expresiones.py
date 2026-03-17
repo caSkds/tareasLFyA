@@ -27,11 +27,24 @@ pruebas_nmatch ["CODIGO_DE_EJERCICIO"] = ["#HolaMundo","#UNAM ONOS","#Covid 19",
 #Por ejemplo: [e03] Σ = {a, b,..., z}. Cadenas que no contienen tres consonantes consecutivas.
 
 #e01
+# e01
 ejercicios["e01"] = re.compile(r'^[a-z]([aeiou][a-z])*$')
 
-pruebas_match["e01"] = ["a", "bac", "holas", "xexix", "mural"]
+pruebas_match["e01"] = [
+    "a", 
+    "bac", 
+    "holas", 
+    "xexix", 
+    "mural"
+]
 
-pruebas_nmatch["e01"] = ["ab", "bxc", "hxl", "aaaa", ""]
+pruebas_nmatch["e01"] = [
+    "ab", 
+    "bxc", 
+    "hxl", 
+    "aaaa", 
+    ""
+]
 
 #e02
 ejercicios["e02"] = re.compile(r'^([a-z0-9][^aeiou])([a-z0-9][^aeiou])*(?:[a-z0-9])?$')
@@ -55,9 +68,21 @@ pruebas_nmatch["e02"] = [
 #e10
 ejercicios["e10"] = re.compile(r'^([b-df-hj-np-tv-z0-9]*|[a-z0-9]*[b-df-hj-np-tv-z][a-z0-9]*[b-df-hj-np-tv-z][a-z0-9]*)$')
 
-pruebas_match["e10"] = ["123", "bcd", "hola", "xaeiouy", "dcd"]
+pruebas_match["e10"] = [
+    "123", 
+    "bcd", 
+    "hola", 
+    "xaeiouy", 
+    "dcd"
+]
 
-pruebas_nmatch["e10"] = ["a", "aeiou", "ba", "e123", "a1b2"]
+pruebas_nmatch["e10"] = [
+    "a", 
+    "aeiou", 
+    "ba", 
+    "e123", 
+    "a1b2"
+]
 
 #e12
 ejercicios["e12"] = re.compile(r'^([a-z]+|[0-9]+)$')
@@ -81,9 +106,21 @@ pruebas_nmatch["e12"] = [
 #e22
 ejercicios["e22"] = re.compile(r'^[a-z0-9]*([a-z][a-z0-9]*[0-9]|[0-9][a-z0-9]*[a-z])[a-z0-9]*$')
 
-pruebas_match["e22"] = ["a1", "1a", "hola123", "000x000", "a1b2c3"]
+pruebas_match["e22"] = [
+    "a1", 
+    "1a", 
+    "hola123", 
+    "000x000", 
+    "a1b2c3"
+]
 
-pruebas_nmatch["e22"] = ["hola", "12345", "", "a", "0"]
+pruebas_nmatch["e22"] = [
+    "hola", 
+    "12345", 
+    "", 
+    "a", 
+    "0"
+]
 #e24
 ejercicios["e24"] = re.compile(r'^([a-z0-9]*[02468]){1,2}[a-z0-9]*$')
 
