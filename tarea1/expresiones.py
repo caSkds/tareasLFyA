@@ -5,21 +5,26 @@ import re
 #es decir ejercicios["e03"]  es la solución al ejercicio [e03]
 ejercicios = {
     "e08": re.compile('[aeiou][a-z]|[aeiou][a-z]*[aeiou][a-z]'),
-    "e21" :re.compile("^[a-z0-9]*([13579][a-z0-9]*[13579][a-z0-9]*[02468]|[13579][a-z0-9]*[02468][a-z0-9]*[13579]|[02468][a-z0-9]*[13579][a-z0-9]*[13579])[a-z0-9]*$")
+    "e21" :re.compile("^[a-z0-9]*([13579][a-z0-9]*[13579][a-z0-9]*[02468]|[13579][a-z0-9]*[02468][a-z0-9]*[13579]|[02468][a-z0-9]*[13579][a-z0-9]*[13579])[a-z0-9]*$"),
+    "e26" :re.compile("([a-z13579]+[02468]{0,1})*|([02468]{0,1}[a-z13579]+)*|[02468]"),
+    "e27" :re.compile("[a-z0-9]{2,}([02468][13579])$|[a-z0-9]{2,}([13579][02468])$|")
 }
 #cada elemento de la variable pruebas_match deberá ser un arreglo con las cadenas con las que DEBE hacer match la solución
 #Por ejemplo pruebas_match["e03"] = ["cadena1","cadena2"...] significa que cadena1, cadena2, etc. deben hacer match con la ER del ejercicio e03
 pruebas_match = {
     "e08": ["ab", "ii", "aab","alugbhwrfuz", "uaf"],
-    "e21": ["121", "a33b2", "2lhib13","9asfrwq0lhb1", "a2345dsa13ihn2iuh"]
+    "e21": ["121", "a33b2", "2lhib13","9asfrwq0lhb1", "a2345dsa13ihn2iuh"],
+    "e26": ["11", "a2b332l34","a2a2a2","ipbn135ipjbi3", "a" , "2"],
+    "e27": ["aa01", "ihb98", "asd21", "ioj32", "ple90"]
 
 }
 #cada elemento de la variable pruebas_nmatch deberá ser un arreglo con las cadenas con las que NO DEBE hacer match la solución
 #Por ejemplo pruebas_nmatch["e03"] = ["cadena1","cadena2"...] significa que cadena1, cadena2, etc. no deben hacer match
 pruebas_nmatch = {
     "e08": ["abc", "xyz", "aba", "ba", "a"],
-    "e21": ["322", "feqwargt4", "dewa2s12", "vdas1vdsa1vdsa1bilhk1j", "jn2u444gkbhj2ouhbo6"]
-
+    "e21": ["322", "feqwargt4", "dewa2s12", "vdas1vdsa1vdsa1bilhk1j", "jn2u444gkbhj2ouhbo6"],
+    "e26": ["22", "a28bhli325", "a122", "a22b3c4", "dd544"],
+    "e27": ["a", "ihb88", "asdi1", "ioj22", "ple00"]
 }
 
 #Ejemplo:
