@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><structure>
+	<type>grammar</type>
+	<production>
+		<left>S</left>
+		<right>X</right>
+	</production>
+	<production>
+		<left>X</left>
+		<right>aaX</right>
+	</production>
+	<production>
+		<left>X</left>
+		<right>Y</right>
+	</production>
+	<production>
+		<left>Y</left>
+		<right>bbYcc</right>
+	</production>
+	<production>
+		<left>Y</left>
+		<right>bZc</right>
+	</production>
+	<production>
+		<left>Z</left>
+		<right>ddZ</right>
+	</production>
+	<production>
+		<left>Z</left>
+		<right>d</right>
+	</production>
+</structure>
